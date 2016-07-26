@@ -1,3 +1,5 @@
+//Rene Torres  Hernandez
+
 $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
   // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
@@ -82,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // On first load, show home view
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
-  allCategoriesUrl, buildAndShowHomeHTML,
- // [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
+  allCategoriesUrl,
+  buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitely setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -104,8 +106,6 @@ function buildAndShowHomeHTML (categories) {
       // var chosenCategoryShortName = ....
 
        var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
-       
-      
        //var chosenCategoryShortName = chooseRandomCategory(categories);
        
       //chosenCategoryShortName = JSON.stringify(chosenCategoryShortName.short_name);
